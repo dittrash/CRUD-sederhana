@@ -1,4 +1,5 @@
 <?php
+	include('engine/session.php');
 	include('engine/connect.php');
 	$id = $_REQUEST['id'];
 	$result = mysqli_query($conn, 'SELECT * FROM mobil WHERE kode='.$id);
@@ -19,7 +20,7 @@
 	<div id="container" style="width: 40%;float: left;">
 		<a href="index.php"><button class="button"><< Kembali</button></a><br/>
 		<form action="engine/update.php" method="POST" enctype="multipart/form-data">
-			<table width="500px">
+			<table width="500px" class="table-fill">
 				<?php
 					echo '<tr>';
 					echo '<td class="text-right">Kode</td><td><input type="text" name="id" value="'.$record[0].'" readonly="readonly"/></td>';
@@ -41,10 +42,10 @@
 					echo '<td class="text-right">Mesin</td><td><input type="text" name="engine" value="'.$record[4].'"/></td>';
 					echo '</tr>';
 					echo '<tr>';
-					echo '<td class="text-right">Kapasitas Mesin</td><td><input type="text" name="capacity" value="'.$record[5].'"/></td>';
+					echo '<td class="text-right">Kapasitas Mesin</td><td><input type="number" name="capacity" value="'.$record[5].'" size="2"/> CC</td>';
 					echo '</tr>';
 					echo '<tr>';
-					echo '<td class="text-right">Tenaga<td><input type="text" name="power" value="'.$record[6].'"/></td>';
+					echo '<td class="text-right">Tenaga<td><input type="number" name="power" value="'.$record[6].'" size="2"/> hp</td>';
 					echo '</tr>';
 					echo '<tr>';
 					echo '<td class="text-right">Gambar</td><td><img src="'.$record[7].'" width="200px"/>

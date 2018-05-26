@@ -1,3 +1,6 @@
+<?php
+	include('engine/session.php');
+?>
 <html>
 <!--
 	TUGAS PEMROGRAMAN BERBASIS WEB 
@@ -18,7 +21,7 @@
 	<div id="container" style="width: 40%;float: left;">
 		<a href="index.php"><button class="button"><< Kembali</button></a><br/>
 		<form action="engine/add.php" method="POST" enctype="multipart/form-data">
-			<table width="500px">
+			<table width="500px" class="table-fill">
 				<tr>
 					<td class="text-right">Kode</td><td><input type="text" name="id"/></td>
 				</tr>
@@ -39,10 +42,10 @@
 					<td class="text-right">Mesin</td><td><input type="text" name="engine"/></td>
 				</tr>
 				<tr>
-					<td class="text-right">Kapasitas Mesin</td><td><input type="text" name="capacity"/></td>
+					<td class="text-right">Kapasitas Mesin</td><td><input type="number" name="capacity" size="4" /> CC</td>
 				</tr>
 				<tr>
-					<td class="text-right">Tenaga</td><td><input type="text" name="power"/></td>
+					<td class="text-right">Tenaga</td><td><input type="number" name="power" size="4"/> hp</td>
 				</tr>
 				<tr>
 					<td class="text-right">Gambar</td><td><input type="file" name="image" id="image"/></td>

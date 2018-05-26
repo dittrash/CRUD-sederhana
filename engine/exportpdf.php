@@ -17,7 +17,7 @@
 	$pdf = new \Mpdf\Mpdf();
 	$pdf->SetHeader('Daftar Mobil MPV');
 	$pdf->AddPage();
-	$pdf->WriteHTML('<h1>Dafar Mobil MPV</h1>');
+	$pdf->WriteHTML('<h1>Daftar Mobil MPV</h1>');
 	$pdf->WriteHTML('<table border="1" width="100%">');
 	$pdf->WriteHTML($thead);
 	while($record = mysqli_fetch_array($result)){				

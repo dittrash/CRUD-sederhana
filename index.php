@@ -1,3 +1,6 @@
+<?php
+	include('engine/session.php');
+?>
 <html>
 <!--
 	TUGAS PEMROGRAMAN BERBASIS WEB 
@@ -17,7 +20,9 @@
 	</div>
 	<div id="container" style="width: 82%;float: left;">
 		<div id="button" style="width:50%;float: left">
-			<a href="new.php"><button class="button">+ Tambah Data Baru</button></a>&nbsp;<a href="engine/exportpdf.php"><button class="button">Ekspor ke .PDF</button></a>
+			<a href="new.php"><button class="button">+ Tambah Data Baru</button></a>&nbsp;
+			<a href="engine/exportpdf.php"><button class="button">Ekspor ke .PDF</button></a>&nbsp;
+			<a href="engine/logout.php"><button class="button">Keluar</button></a>
 		</div>
 		<div id="search" style="width:50%;float: right;" align="right">
 			<form action="index.php">
@@ -57,8 +62,8 @@
 						echo '<td>'.$record[2].'</td>';
 						echo '<td class="text-center">'.$record[3].'</td>';
 						echo '<td>'.$record[4].'</td>';
-						echo '<td>'.$record[5].'</td>';
-						echo '<td>'.$record[6].'</td>';
+						echo '<td>'.$record[5].'CC</td>';
+						echo '<td>'.$record[6].'hp</td>';
 						echo '<td><a href="edit.php?id='.$record[0].'">Ubah</a>';
 						echo '<td><a onClick="return confirm('.$delPrompt.')" href="engine/delete.php?id='.$record[0].'">Hapus</a>';
 						echo '</tr>';

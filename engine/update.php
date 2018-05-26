@@ -19,7 +19,7 @@
 		//delete previous image
 		unlink($image);
 		//upload new image
-		$dir = $_SERVER['DOCUMENT_ROOT'].'/daftarmobil/images/';
+		$dir = '../images/';
 		$file = $dir .basename($_FILES['image']['name']);
 		$path = 'images/'.basename($_FILES['image']['name']);
 		move_uploaded_file($_FILES['image']['tmp_name'], $file);
